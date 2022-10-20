@@ -2,13 +2,11 @@ import data from "../data/data.json";
 
 export default function MainComponent() {
   return (
-    <div>
+    <div className="grid-container">
       {data.map((item) => (
         <div key={item.name} className={`${item.className} grid`}>
           <div className="grid-row">
-            <div>
-              <img src={item.avatar} alt="avatar" className="avatar" />
-            </div>
+            <img src={item.avatar} alt="avatar" className="avatar" />
             <div>
               <p className="name">{item.name}</p>
               <p className="graduate">{item.sub_name}</p>

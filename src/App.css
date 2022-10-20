@@ -11,11 +11,14 @@
   background-color: rgb(237, 242, 248);
   min-height: 100vh;
 }
+
 .container {
   margin: auto;
   padding: 2em 0;
   width: 90%;
+  max-width: 1110px;
 }
+
 img {
   max-width: 100%;
 }
@@ -26,7 +29,9 @@ img {
   border-radius: 7px;
   margin-bottom: 1.3em;
   padding: 1em 0 2em 0;
+
 }
+
 .grid-row {
   display: flex;
   align-items: center;
@@ -34,22 +39,24 @@ img {
   width: 85%;
   margin: auto;
 }
-.grid-row > div:nth-child(1) {
+
+.grid-row>div:nth-child(1) {
   width: 15%;
   text-align: left;
-  
 }
 
-.grid-row > div:nth-child(2) {
+.grid-row>div:nth-child(2) {
   width: 50%;
   text-align: left;
+  margin-left: 1em;
 }
 
-.grid-row + div {
+.grid-row+div {
   width: 85%;
   margin: auto;
   text-align: left;
 }
+
 .grid-row .avatar {
   width: 34px;
   height: 35px;
@@ -59,17 +66,21 @@ img {
 .clifford {
   background: rgb(115, 63, 200);
 }
+
 .clifford .avatar {
   border: 1px solid rgb(174, 127, 241);
 }
+
 .clifford .name {
   color: #fff;
   font-weight: 500;
 }
+
 .clifford .graduate {
   color: rgb(174, 127, 241);
   font-size: .7rem;
 }
+
 .clifford .main-text {
   color: #fff;
   position: relative;
@@ -77,6 +88,7 @@ img {
   font-size: 1.3rem;
   font-weight: 600;
 }
+
 .clifford .paragraph {
   color: rgb(174, 127, 241);
   font-size: .8rem;
@@ -87,20 +99,24 @@ img {
 .walters {
   background: rgb(73, 85, 107);
 }
+
 .walters .name {
   color: #fff;
   font-weight: 500;
 }
+
 .walters .graduate {
   color: rgb(171, 178, 194);
   font-size: .7rem;
 }
+
 .walters .main-text {
   color: #fff;
   font-size: 1.3rem;
   font-weight: 600;
   margin: .7em 0;
 }
+
 .walters .paragraph {
   color: rgb(171, 178, 194);
   font-size: .8rem;
@@ -112,46 +128,56 @@ img {
   background: #fff;
   box-shadow: 3px 5px 10px rgb(210, 217, 227);
 }
+
 .harmon .name {
   color: #000;
   font-weight: 500;
 }
+
 .harmon .graduate {
   color: rgb(171, 178, 194);
   font-size: .7rem;
 }
+
 .harmon .main-text {
   color: rgb(79, 85, 97);
   font-size: 1.3rem;
   font-weight: 600;
   margin: .7em 0;
 }
+
 .harmon .paragraph {
   color: rgb(171, 178, 194);
   font-size: .8rem;
   font-weight: 500;
   line-height: 1.2rem;
 }
+
 .adams {
   background: rgb(24, 32, 45);
 }
+
 .adams .avatar {
   border: 1px solid rgb(174, 127, 241);
 }
+
 .adams .name {
   color: #fff;
   font-weight: 500;
 }
+
 .adams .graduate {
   color: rgb(112, 120, 133);
   font-size: .7rem;
 }
+
 .adams .main-text {
   color: #fff;
   font-size: 1.3rem;
   font-weight: 600;
   margin: .7em 0;
 }
+
 .adams .paragraph {
   color: rgb(112, 120, 133);
   font-size: .8rem;
@@ -163,23 +189,78 @@ img {
   background: #fff;
   box-shadow: 3px 5px 10px rgb(210, 217, 227);
 }
+
 .white .name {
   color: #000;
   font-weight: 500;
 }
+
 .white .graduate {
   color: rgb(171, 178, 194);
   font-size: .7rem;
 }
+
 .white .main-text {
   color: rgb(84, 88, 100);
   font-size: 1.3rem;
   font-weight: 600;
   margin: .7em 0;
 }
+
 .white .paragraph {
   color: rgb(171, 178, 194);
   font-size: .8rem;
   font-weight: 500;
   line-height: 1.2rem;
+}
+
+@media(min-width: 1000px) {
+  /* main-component */
+  .grid-container {
+    margin-bottom: 0px;
+    padding: 7em 0 0 0;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .grid.clifford {
+    grid-column: span 2;
+  }
+
+  .grid.adams {
+    grid-column: span 2;
+  }
+
+  .grid.white {
+    grid-column-start: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .grid-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 85%;
+    margin: auto;
+  }
+
+  .grid-row>div:nth-child(1) {
+    width: 15%;
+    text-align: left;
+  }
+
+  .grid-row>div:nth-child(2) {
+    width: 60%;
+    text-align: left;
+  }
+
+  .grid-row+div {
+    width: 85%;
+  }
+
+  .white .paragraph {
+    padding-top: 1.3em;
+  }
 }
