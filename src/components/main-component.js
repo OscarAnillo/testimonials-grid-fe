@@ -1,10 +1,12 @@
 import data from "../data/data.json";
 
+import 'animate.css';
+
 export default function MainComponent() {
   return (
-    <div className="grid-container">
+    <div className="grid-container animate__animated animate__pulse">
       {data.map((item) => (
-        <div key={item.name} className={`${item.className} grid`}>
+        <div key={item.name} className={`${item.className} grid animate__animated animate__pulse`}>
           <div className="grid-row">
             <img src={item.avatar} alt="avatar" className="avatar" />
             <div>
